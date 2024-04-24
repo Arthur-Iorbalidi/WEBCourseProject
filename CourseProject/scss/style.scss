@@ -44,6 +44,9 @@ header {
         display: flex;
         align-items: center;
         gap: 29px;
+        .brexLogo {
+            padding: 5px;
+        }
     }
     .navigation {
         ul {
@@ -57,15 +60,18 @@ header {
     }
     .logIn {
         display: flex;
-        gap: 38px;
+        gap: 15px;
         a {
             font-size: 1.4rem;
         }
     }
+    .changeTheme {
+        cursor: pointer;
+    }
     .right {
         display: flex;
         align-items: center;
-        gap: 29px;
+        gap: 15px;
         .contact {
             height: 36px;
             padding: 0 30px;
@@ -74,6 +80,7 @@ header {
             background: $link-color;
             color: #FFF;
             font-size: 1.4rem;
+            transition: 300ms all;
         }
         .burger {
             display: none;
@@ -172,11 +179,13 @@ header {
                 background: $link-color;
                 flex-basis: 160px;
                 color: #FFF;
+                transition: 300ms all;
             }
             .open {
                 border: 1px solid rgba(0, 0, 0, 0.10);
                 background: #FFF;
                 flex-basis: 160px;
+                transition: 300ms all;
             }
         }
         .links {
@@ -288,6 +297,7 @@ header {
                 line-height: 2.2rem;
                 margin: 0 auto;
                 background-color: transparent;
+                transition: 300ms all;
             }
         }
         img {
@@ -342,6 +352,7 @@ header {
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 2.2rem;
+        transition: 300ms all;
     }
     img {
         margin-top: 40px;
@@ -355,6 +366,26 @@ header {
     }
     .slider {
         padding: 30px 0;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .arrows {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        .arrow {
+            cursor: pointer;
+            transition: 300ms all;
+        }
+    }
+    .slider_container {
+        width: 300%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition: 300ms all;
+        right: 0;
     }
     .slide {
         display: flex;
@@ -362,6 +393,7 @@ header {
         justify-content: center;
         align-items: center;
         gap: 49px;
+        width: 100%;
         .statement {
             max-width: 680px;
             color: #212121;
@@ -718,6 +750,153 @@ footer {
         }
         .info {
             margin-top: 60px;
+        }
+    }
+}
+
+.darkTheme {
+    background-color: #000;
+    header {
+        .brex {
+            img {
+                background-color: #fff;
+                border-radius: 5px;
+            }
+        }
+        .navigation {
+            ul {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .logIn {
+            a {
+                color: #fff;
+            }
+        }
+        .right {
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    .Corporate {
+        .left {
+            h1 {
+                color: #fff;
+            }
+            .links {
+                h3 {
+                    color: #fff;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .Solutions {
+        .header {
+            h2 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
+        }
+    }
+    .statements {
+        .slide {
+            .statement {
+                color: #fff;
+            }
+            .author {
+                color: #fff;
+            }
+        }
+        .arrow {
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    .How {
+        h2 {
+            color: #fff;
+        }
+        .customers {
+            .customer {
+                p {
+                    color: #fff;
+                }
+                .photo {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (hover: hover) {
+    header {
+        .right {
+            .contact:hover {
+                background: #fff;
+                color: #000
+            }
+        }
+    }
+    .Corporate {
+        .left {
+            .btns {
+                .contact:hover {
+                    background: #fff;
+                    color: #000
+                }
+                .open:hover {
+                    background: #f46a35;
+                    color: #fff
+                }
+            }
+        }
+    }
+    .Solutions {
+        .for {
+            .btn {
+                .btnLeft:hover {
+                    background: #fff;
+                    color: #000
+                }
+                .btnRight:hover {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .statements {
+        .arrows {
+            .arrow:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .Flexible {
+        button:hover {
+            background: #f46a35;
+            color: #fff
+        }
+    }
+    footer {
+        li:hover {
+            a {
+                text-decoration: underline;
+            }
         }
     }
 }

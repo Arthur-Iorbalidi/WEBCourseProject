@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <div class="brex">
-                <img src="../assets/icons/Brex.svg" alt="logo">
+                <img class="brexLogo" src="../assets/icons/Brex.svg" alt="logo">
                 <nav class="navigation">
                     <ul>
                         <li>
@@ -37,6 +37,11 @@
                 <div class="logIn">
                     <a href="">Log in</a>
                     <a href="">Sign in</a>
+                </div>
+                <div class="changeTheme">
+                    <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.5C13.5899 3.5 16.5 6.41015 16.5 10C16.5 13.5899 13.5899 16.5 10 16.5V3.5ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" fill="#212121"/>
+                    </svg>                        
                 </div>
                 <button class="contact">Contact sales</button>
                 <div class="burger">
@@ -128,7 +133,7 @@
                     <h3>Brex for enterprise.</h3>
                     <p>Easy-to-use corporate cards and spend management software in an integrated global solution.</p>
                     <div class="btn">
-                        <button>Learn more</button>
+                        <button class="btnLeft">Learn more</button>
                     </div>
                     <img src="../assets/imgs/phone.png" alt="">
                 </div>
@@ -136,7 +141,7 @@
                     <h3>Brex for startups.</h3>
                     <p>Fast access to global cards, business account (send ACH and wires), spend management, and bill pay.</p>
                     <div class="btn">
-                        <button>Learn more</button>
+                        <button class="btnRight">Learn more</button>
                     </div>
                     <img src="../assets/imgs/cards.png" alt="">
                 </div>
@@ -157,10 +162,40 @@
     <div class="statements" id="statements">
         <div class="container">
             <div class="slider">
-                <div class="slide">
-                    <img src="../assets/icons/DOORBASHLower.svg" alt="">
-                    <p class="statement">"DoorDash went from a 100-person startup to over 9,000 employees. We needed a solution that was innovative in the T&E space."</p>
-                    <p class="author">— Mike Kim, VP of Finance, DoorDash</p>
+                <div class="slider_container">
+                    <div class="slide">
+                        <img src="../assets/icons/DOORBASHLower.svg" alt="">
+                        <p class="statement">"DoorDash went from a 100-person startup to over 9,000 employees. We needed a solution that was innovative in the T&E space."</p>
+                        <p class="author">— Mike Kim, VP of Finance, DoorDash</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/icons/airbnb.svg" alt="">
+                        <p class="statement">"We’ve gone from spending 20 hours a month on close to under 2 hours, while achieving over 99% employee compliance."</p>
+                        <p class="author">— Teddy Collins, Vice President of Corporate Finance at SeatGeek</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/icons/deel.svg" alt="">
+                        <p class="statement">"Brex’s global cards allow us to analyze spend across our entities in one dashboard — while operating in local currencies."</p>
+                        <p class="author">— Mike Duffy, Director, Assistant Controller, Lemonade</p>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <div class="arrow arrowLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+                            <path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15
+                            -6.7 15-15-6.7-15-15-15z"/>
+                            <path d="M25.3 34.7L15.6 25l9.7-9.7 1.4 1.4-8.3 8.3 8.3 8.3z"/>
+                            <path d="M17 24h17v2H17z"/>
+                        </svg>
+                    </div>
+                    <div class="arrow arrowRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+                            <path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 
+                            15-15-6.7-15-15-15z"/>
+                            <path d="M24.7 34.7l-1.4-1.4 8.3-8.3-8.3-8.3 1.4-1.4 9.7 9.7z"/>
+                            <path d="M16 24h17v2H16z"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

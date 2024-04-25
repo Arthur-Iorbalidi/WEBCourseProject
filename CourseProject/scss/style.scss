@@ -472,6 +472,18 @@ header {
     }
 }
 
+.map {
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 0 32px 100px 32px;
+        iframe {
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+}
+
 .See {
     .container {
         display: flex;
@@ -812,6 +824,11 @@ footer {
         }
         h2 {
             letter-spacing: normal;
+        }
+    }
+    .map {
+        .container {
+            padding: 0 20px 100px 20px;
         }
     }
     .See {

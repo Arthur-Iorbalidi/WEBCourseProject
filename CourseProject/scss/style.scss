@@ -58,11 +58,12 @@ header {
             }
         }
     }
-    .logIn {
+    .authorization {
         display: flex;
         gap: 15px;
-        a {
+        span {
             font-size: 1.4rem;
+            cursor: pointer;
         }
     }
     .changeTheme {
@@ -590,6 +591,75 @@ footer {
     }
 }
 
+.modalRegister_Background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(64, 63, 61, 0.80);
+    display: none;
+    z-index: 2;
+    padding: 56px;
+    &.active {
+        display: block;
+    }
+    .modalRegister {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 16px;
+        border-radius: 40px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form_Register {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .header_Registration{
+            font-size: 3rem;
+        }
+        .inputWrapper {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #000;
+            font-size: 2.5rem;
+        }
+        .mistakeMessage {
+            width: 100%;
+            font-size: 2rem;
+            padding: 0 5px;
+            color: #fff;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+        }
+        .submitRegistration {
+            width: 100%;
+            font-size: 2.5rem;
+            padding: 5px;
+            border-radius: 10px;
+            &:disabled {
+                pointer-events: none;
+            }
+            &:enabled {
+                background-color: #51adb9;
+            }
+        }
+    }
+}
+
 @media(max-width: 900px) {
     header {
         .navigation {
@@ -691,6 +761,14 @@ footer {
         }
         .icons {
             margin-top: 30px;
+        }
+    }
+    .modalRegister_Background {
+        padding: 10px;
+        .modalRegister {
+            .mistakeMessage {
+                font-size: 1.5rem;
+            }
         }
     }
 }

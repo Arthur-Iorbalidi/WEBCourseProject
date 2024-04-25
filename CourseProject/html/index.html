@@ -34,9 +34,9 @@
                 </nav>
             </div>
             <div class="right">
-                <div class="logIn">
-                    <a href="">Log in</a>
-                    <a href="">Sign in</a>
+                <div class="authorization">
+                    <span class="logIn">Log in</span>
+                    <span class="sighIn">Sign in</span>
                 </div>
                 <div class="changeTheme">
                     <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -531,5 +531,29 @@
             </div>
         </div>
     </footer>
+    <div class="modalRegister_Background">
+        <div class="modalRegister">
+            <form action="" class="form_Register">
+                <h2 class="header_Registration">Registration</h2>
+                <div class="inputWrapper inputNameWrapper">
+                    <input type="text" placeholder="Name" class="inputName">
+                    <div class="mistakeMessage mistakeMessageName"></div>
+                </div>
+                <div class="inputWrapper inputNumberWrapper">
+                    <input type="text" placeholder="Number" class="inputNumber">
+                    <div class="mistakeMessage mistakeMessageNumber"></div>
+                </div>
+                <div class="inputWrapper inputEmailWrapper">
+                    <input type="text" placeholder="Email" class="inputEmail">
+                    <div class="mistakeMessage mistakeMessageEmail"></div>
+                </div>
+                <div class="inputWrapper inputPasswordWrapper">
+                    <input type="text" placeholder="Password" class="inputPassword">
+                    <div class="mistakeMessage mistakeMessagePassword"></div>
+                </div>
+                <button type="submit" class="submitRegistration" disabled>Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
-import BurgerMenu from './components/BurgerMenu.js';
-import Slider from './components/Slider.js';
-import ChangeTheme from './components/changeTheme.js';
+import BurgerMenu from './components/MainPage/BurgerMenu.js';
+import Slider from './components/MainPage/Slider.js';
+import ChangeTheme from './components/MainPage/changeTheme.js';
+import ValidationRegistration from './components/Registration/ValidationRegistration.js';
 
 class App {
     init() {
@@ -12,6 +13,9 @@ class App {
 
         const changeTheme = new ChangeTheme();
         changeTheme.init();
+
+        const validationRegistration = new ValidationRegistration();
+        validationRegistration.init();
     }
 }
 

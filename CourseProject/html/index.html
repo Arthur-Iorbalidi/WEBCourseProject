@@ -16,25 +16,26 @@
                 <nav class="navigation">
                     <ul>
                         <li>
-                            <a href="#Solutions">Solutions</a>
+                            <a href="#Solutions" data-i18="1">Solutions</a>
                         </li>
                         <li>
-                            <a href="#Flexible">Products</a>
+                            <a href="#Flexible" data-i18="2">Products</a>
                         </li>
                         <li>
-                            <a href="#statements">Why Brex?</a>
+                            <a href="#statements" data-i18="3">Why Brex?</a>
                         </li>
                         <li>
-                            <a href="#See">Empower</a>
+                            <a href="#See" data-i18="4">Empower</a>
                         </li>
                         <li>
-                            <a href="#Resorces">Resources</a>
+                            <a href="#Resorces" data-i18="5">Resources</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="right">
                 <div class="authorization">
+                    <span class="logout hidden">Logout</span>
                     <span class="logIn">Log in</span>
                     <span class="sighIn">Sign in</span>
                 </div>
@@ -43,7 +44,8 @@
                         <path d="M10 3.5C13.5899 3.5 16.5 6.41015 16.5 10C16.5 13.5899 13.5899 16.5 10 16.5V3.5ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" fill="#212121"/>
                     </svg>                        
                 </div>
-                <button class="contact">Contact sales</button>
+                <div class="changeLang">en</div>
+                <button class="contact" data-i18="7">Contact sales</button>
                 <div class="burger">
                     <div class="burger_line"></div>
                     <div class="burger_line"></div>
@@ -53,26 +55,29 @@
         <div class="burger_menu">
             <nav class="burger_menu_links">
                 <ul>
-                    <li class="nav_item">
-                        <a class="nav_items_text" href="">Log in</a>
+                    <li class="nav_item logout_burger hidden">
+                        <span class="nav_items_text">Logout</span>
+                    </li>
+                    <li class="nav_item logIn_burger">
+                        <span class="nav_items_text">Log in</span>
+                    </li>
+                    <li class="nav_item sighIn_burger">
+                        <span class="nav_items_text">Sign in</span>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_items_text" href="">Sign in</a>
+                        <a class="nav_items_text" href="#Solutions" data-i18="1">Solutions</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_items_text" href="#Solutions">Solutions</a>
+                        <a class="nav_items_text" href="#Flexible" data-i18="2">Products</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_items_text" href="#Flexible">Products</a>
+                        <a class="nav_items_text" href="#statements" data-i18="3">Why Brex?</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_items_text" href="#statements">Why Brex?</a>
+                        <a class="nav_items_text" href="#See" data-i18="4">Empower</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav_items_text" href="#See">Empower</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_items_text" href="#Resorces">Resources</a>
+                        <a class="nav_items_text" href="#Resorces" data-i18="5">Resources</a>
                     </li>
                 </ul>
             </nav>
@@ -81,27 +86,27 @@
     <section class="Corporate">
         <div class="container">
             <div class="left">
-                <h1>Corporate cards and spend management teams actually love.</h1>
+                <h1 data-i18="6">Corporate cards and spend management teams actually love.</h1>
                 <div class="btns">
-                    <button class="contact btn">Contact sales</button>
-                    <button class="open btn">Open an account</button>
+                    <button class="contact btn" data-i18="7">Contact sales</button>
+                    <button class="open btn hidden" data-i18="8">Open an account</button>
                 </div>
                 <div class="links">
                     <div class="line"></div>
                     <div class="forEnterprise">
-                        <h3>Brex for enterprise</h3>
-                        <p>Easy-to-use corporate cards and spend management software in an integrated global solution.</p>
+                        <h3 data-i18="9">Brex for enterprise</h3>
+                        <p data-i18="10">Easy-to-use corporate cards and spend management software in an integrated global solution.</p>
                         <a href="" class="learn_more">
-                            <span>Learn more</span>
+                            <span data-i18="11">Learn more</span>
                             <img src="../assets/icons/linkArrow.svg" alt="">
                         </a>
                     </div>
                     <div class="line line2"></div>
                     <div class="forStartups">
-                        <h3>Brex for startups</h3>
-                        <p>Fast access to global cards, business account (send ACH and wires), spend management, and bill pay.</p>
+                        <h3 data-i18="12">Brex for startups</h3>
+                        <p data-i18="13">Fast access to global cards, business account (send ACH and wires), spend management, and bill pay.</p>
                         <a href="" class="learn_more">
-                            <span>Learn more</span>
+                            <span data-i18="11">Learn more</span>
                             <img src="../assets/icons/linkArrow.svg" alt="">
                         </a>
                     </div>
@@ -125,23 +130,23 @@
     <section class="Solutions" id="Solutions">
         <div class="container">
             <div class="header">
-                <h2>Solutions that work for you.</h2>
-                <p>Brex meets you where you are — and takes you where you want to go.</p>
+                <h2 data-i18="14">Solutions that work for you.</h2>
+                <p data-i18="15">Brex meets you where you are — and takes you where you want to go.</p>
             </div>
             <div class="for">
                 <div class="forEnterprise">
-                    <h3>Brex for enterprise.</h3>
-                    <p>Easy-to-use corporate cards and spend management software in an integrated global solution.</p>
+                    <h3 data-i18="9">Brex for enterprise.</h3>
+                    <p data-i18="10">Easy-to-use corporate cards and spend management software in an integrated global solution.</p>
                     <div class="btn">
-                        <button class="btnLeft">Learn more</button>
+                        <button class="btnLeft" data-i18="11">Learn more</button>
                     </div>
                     <img src="../assets/imgs/phone.png" alt="">
                 </div>
                 <div class="forStartups">
-                    <h3>Brex for startups.</h3>
-                    <p>Fast access to global cards, business account (send ACH and wires), spend management, and bill pay.</p>
+                    <h3 data-i18="12">Brex for startups.</h3>
+                    <p data-i18="13">Fast access to global cards, business account (send ACH and wires), spend management, and bill pay.</p>
                     <div class="btn">
-                        <button class="btnRight">Learn more</button>
+                        <button class="btnRight" data-i18="11">Learn more</button>
                     </div>
                     <img src="../assets/imgs/cards.png" alt="">
                 </div>
@@ -150,12 +155,12 @@
     </section>
     <section class="Flexible" id="Flexible">
         <div class="container">
-            <h2>Flexible spend limits for any need.</h2>
-            <p>
+            <h2 data-i18="16">Flexible spend limits for any need.</h2>
+            <p data-i18="17">
                 Enable spend for any purpose — from travel to stipends to procurements — at all levels of your company. All on one card. 
                 ith controls built in. That's the magic of budgets.
             </p>
-            <button>See how budgets work</button>
+            <button data-i18="18">See how budgets work</button>
             <img src="../assets/imgs/createABudget.png" alt="">
         </div>
     </section>
@@ -165,17 +170,17 @@
                 <div class="slider_container">
                     <div class="slide">
                         <img src="../assets/icons/DOORBASHLower.svg" alt="">
-                        <p class="statement">"DoorDash went from a 100-person startup to over 9,000 employees. We needed a solution that was innovative in the T&E space."</p>
+                        <p class="statement" data-i18="19">"DoorDash went from a 100-person startup to over 9,000 employees. We needed a solution that was innovative in the T&E space."</p>
                         <p class="author">— Mike Kim, VP of Finance, DoorDash</p>
                     </div>
                     <div class="slide">
                         <img src="../assets/icons/airbnb.svg" alt="">
-                        <p class="statement">"We’ve gone from spending 20 hours a month on close to under 2 hours, while achieving over 99% employee compliance."</p>
+                        <p class="statement" data-i18="20">"We’ve gone from spending 20 hours a month on close to under 2 hours, while achieving over 99% employee compliance."</p>
                         <p class="author">— Teddy Collins, Vice President of Corporate Finance at SeatGeek</p>
                     </div>
                     <div class="slide">
                         <img src="../assets/icons/deel.svg" alt="">
-                        <p class="statement">"Brex’s global cards allow us to analyze spend across our entities in one dashboard — while operating in local currencies."</p>
+                        <p class="statement" data-i18="21">"Brex’s global cards allow us to analyze spend across our entities in one dashboard — while operating in local currencies."</p>
                         <p class="author">— Mike Duffy, Director, Assistant Controller, Lemonade</p>
                     </div>
                 </div>
@@ -202,29 +207,29 @@
     </div>
     <section class="How">
         <div class="container">
-            <h2>How our customers use Brex to power their companies.</h2>
+            <h2 data-i18="22">How our customers use Brex to power their companies.</h2>
             <div class="customers">
                 <div class="customer">
                     <img src="../assets/imgs/EMPIRE.png" alt="" class="photo">
-                    <p>Empire enables spend and drives accountability in Orangetheory studios with Brex Empower.</p>
+                    <p data-i18="23">Empire enables spend and drives accountability in Orangetheory studios with Brex Empower.</p>
                     <a href="">
-                        <span>Read case study</span>
+                        <span data-i18="26">Read case study</span>
                         <img src="../assets/icons/linkArrow.svg" alt="">
                     </a>
                 </div>
                 <div class="customer">
                     <img src="../assets/imgs/scale.png" alt="" class="photo">
-                    <p>Scale AI unblocks employee spend to ensure speed while boosting control and accountability.</p>
+                    <p data-i18="24">Scale AI unblocks employee spend to ensure speed while boosting control and accountability.</p>
                     <a href="">
-                        <span>Read case study</span>
+                        <span data-i18="26">Read case study</span>
                         <img src="../assets/icons/linkArrow.svg" alt="">
                     </a>
                 </div>
                 <div class="customer">
                     <img src="../assets/imgs/avenue.png" alt="" class="photo">
-                    <p>Avenue One drives automation and accuracy, saving 15 hours a month with Brex Empower and NetSuite.</p>
+                    <p data-i18="25">Avenue One drives automation and accuracy, saving 15 hours a month with Brex Empower and NetSuite.</p>
                     <a href="">
-                        <span>Read case study</span>
+                        <span data-i18="26">Read case study</span>
                         <img src="../assets/icons/linkArrow.svg" alt="">
                     </a>
                 </div>
@@ -245,11 +250,11 @@
     <section class="See" id="See">
         <div class="container">
             <div class="left">
-                <h2>See what Brex can do for you.</h2>
-                <p>Get in touch to learn how our spend solution can increase financial efficiency and speed for your company.</p>
+                <h2 data-i18="27">See what Brex can do for you.</h2>
+                <p data-i18="28">Get in touch to learn how our spend solution can increase financial efficiency and speed for your company.</p>
                 <div class="btns">
-                    <button class="contact btn">Contact sales</button>
-                    <button class="open btn">Open an account</button>
+                    <button class="contact btn" data-i18="7">Contact sales</button>
+                    <button class="open btn hidden" data-i18="8">Open an account</button>
                 </div>
             </div>
             <div class="right">
@@ -536,8 +541,8 @@
             </div>
         </div>
     </footer>
-    <div class="modalRegister_Background">
-        <div class="modalRegister">
+    <div class="modalRegister_Background modal_background">
+        <div class="modalRegister modal">
             <form action="" class="form_Register">
                 <h2 class="header_Registration">Registration</h2>
                 <div class="inputWrapper inputNameWrapper">
@@ -557,6 +562,22 @@
                     <div class="mistakeMessage mistakeMessagePassword"></div>
                 </div>
                 <button type="submit" class="submitRegistration" disabled>Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="modalAuthorization_Background modal_background">
+        <div class="modalAuthorization modal">
+            <form action="" class="form_Authorization">
+                <h2 class="header_Authorization">Registration</h2>
+                <div class="inputWrapper inputNameWrapper">
+                    <input type="text" placeholder="Name" class="inputNameAuthorization">
+                    <div class="mistakeMessage mistakeMessageNameAuthorization"></div>
+                </div>
+                <div class="inputWrapper inputPasswordWrapper">
+                    <input type="text" placeholder="Password" class="inputPasswordAuthorization">
+                    <div class="mistakeMessage mistakeMessagePasswordAuthorization"></div>
+                </div>
+                <button type="submit" class="submitAuthorization" disabled>Submit</button>
             </form>
         </div>
     </div>

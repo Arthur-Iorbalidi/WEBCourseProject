@@ -21,6 +21,10 @@ $base-font-family: 'Roboto';
     overflow: hidden;
 }
 
+.hidden {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -43,7 +47,7 @@ header {
     .brex {
         display: flex;
         align-items: center;
-        gap: 29px;
+        gap: 15px;
         .brexLogo {
             padding: 5px;
         }
@@ -52,7 +56,7 @@ header {
         ul {
             display: flex;
             list-style: none;
-            gap: 29px;
+            gap: 15px;
             a {
                 font-size: 1.4rem;
             }
@@ -68,6 +72,10 @@ header {
     }
     .changeTheme {
         cursor: pointer;
+    }
+    .changeLang {
+        cursor: pointer;
+        font-size: 1.5rem;
     }
     .right {
         display: flex;
@@ -603,7 +611,7 @@ footer {
     }
 }
 
-.modalRegister_Background {
+.modal_background {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -616,7 +624,7 @@ footer {
     &.active {
         display: block;
     }
-    .modalRegister {
+    .modal {
         height: 100%;
         width: 100%;
         position: relative;
@@ -629,6 +637,11 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.modalRegister_Background {
+    .modalRegister {
         .form_Register {
             width: 100%;
             max-width: 350px;
@@ -672,6 +685,51 @@ footer {
     }
 }
 
+.modalAuthorization_Background {
+    .modalAuthorization {
+        .form_Authorization {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .header_Authorization{
+            font-size: 3rem;
+        }
+        .inputWrapper {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #000;
+            font-size: 2.5rem;
+        }
+        .mistakeMessage {
+            width: 100%;
+            font-size: 2rem;
+            padding: 0 5px;
+            color: #fff;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+        }
+        .submitAuthorization {
+            width: 100%;
+            font-size: 2.5rem;
+            padding: 5px;
+            border-radius: 10px;
+            &:disabled {
+                pointer-events: none;
+            }
+            &:enabled {
+                background-color: #51adb9;
+            }
+        }
+    }
+}
+
 @media(max-width: 900px) {
     header {
         .navigation {
@@ -679,6 +737,9 @@ footer {
         }
         .right {
             .logIn {
+                display: none;
+            }
+            .sighIn {
                 display: none;
             }
             .contact {
@@ -775,9 +836,9 @@ footer {
             margin-top: 30px;
         }
     }
-    .modalRegister_Background {
+    .modal_background {
         padding: 10px;
-        .modalRegister {
+        .modal {
             .mistakeMessage {
                 font-size: 1.5rem;
             }
@@ -869,6 +930,9 @@ footer {
             a {
                 color: #fff;
             }
+        }
+        .changeLang {
+            color: #fff;
         }
         .right {
             svg {

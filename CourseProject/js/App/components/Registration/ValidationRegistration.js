@@ -18,7 +18,11 @@ class ValidationRegistration {
 
 
     init() {
+        document.querySelector('.modalRegister_Background').addEventListener('click', this.back.bind(this));
+
         document.querySelector('.sighIn').addEventListener('click', this.open.bind(this));
+
+        document.querySelector('.sighIn_burger').addEventListener('click', this.open.bind(this));
 
         document.querySelector('.inputName').addEventListener('input', this.validationName.bind(this));
 
@@ -88,7 +92,7 @@ class ValidationRegistration {
     }
 
     checkValidation() {
-        if(this.isNameValid && this.isNameValid && this.isEmailValid && this.isPasswordValid) {
+        if(this.isNameValid && this.isNumberValid && this.isEmailValid && this.isPasswordValid) {
             document.querySelector('.submitRegistration').disabled = false;
         }
         else {
@@ -102,6 +106,12 @@ class ValidationRegistration {
 
     clear() {
         document.querySelector('.modalRegister_Background').classList.remove('active');
+    }
+
+    back(event) {
+        if (!event.target.closest('.modalRegister')) {
+            this.clear();
+        }
     }
 
     clearInputs() {
@@ -121,6 +131,24 @@ class ValidationRegistration {
 
         this.clearInputs();
         this.clear();
+
+        this.changePage();
+
+        document.querySelector('.submitRegistration').disabled = true;
+    }
+
+    changePage() {
+        document.querySelector('.logIn').classList.add('hidden');
+        document.querySelector('.logIn_burger').classList.add('hidden');
+        document.querySelector('.sighIn').classList.add('hidden');
+        document.querySelector('.sighIn_burger').classList.add('hidden');
+
+        document.querySelector('.logout').classList.remove('hidden');
+        document.querySelector('.logout_burger').classList.remove('hidden');
+
+        document.querySelectorAll('.open').forEach((elem) => {
+            elem.classList.remove('hidden');
+        });
     }
 }
 

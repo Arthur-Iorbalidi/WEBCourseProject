@@ -1,4 +1,4 @@
-import LocalStorageHandler from "../../services/LocalStorageHandler.js";
+import LocalStorageHandler from "../../../../services/LocalStorageHandler.js";
 
 class Authorization {
     localStorageHandler = new LocalStorageHandler();
@@ -22,8 +22,13 @@ class Authorization {
     }
 
     validationName(event) {
-        const nameStorage = this.localStorageHandler.get('Name');
-        if(nameStorage !== event.target.value) {
+        const user = JSON.parse(this.localStorageHandler.get('user'));
+        if(!user) {
+            document.querySelector('.mistakeMessageNameAuthorization').textContent = 'There isn\'t such user';
+            this.isNameValid = false;
+            return;
+        }
+        if(user.name !== event.target.value) {
             document.querySelector('.mistakeMessageNameAuthorization').textContent = 'There isn\'t such user';
             this.isNameValid = false;
         }
@@ -36,13 +41,13 @@ class Authorization {
     }
 
     validationPassword(event) {
-        const passwordStorage = this.localStorageHandler.get('Password');
+        const user = JSON.parse(this.localStorageHandler.get('user'));
         if (!this.isNameValid) {
             document.querySelector('.mistakeMessagePasswordAuthorization').textContent = 'Enter your name';
             this.isPasswordValid = false;
             return;
         }
-        if(passwordStorage !== event.target.value) {
+        if(user.password !== event.target.value) {
             document.querySelector('.mistakeMessagePasswordAuthorization').textContent = 'Incorrect password';
             this.isPasswordValid = false;
         }
@@ -88,6 +93,10 @@ class Authorization {
 
         this.clearInputs();
         this.clear();
+
+        const user = JSON.parse(this.localStorageHandler.get('user'));
+        user.isLogined = true;
+        this.localStorageHandler.set('user', JSON.stringify(user));
 
         this.changePage();
 

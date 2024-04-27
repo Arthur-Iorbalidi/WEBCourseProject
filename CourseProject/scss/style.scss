@@ -64,6 +64,7 @@ header {
     }
     .authorization {
         display: flex;
+        align-items: center;
         gap: 15px;
         span {
             font-size: 1.4rem;
@@ -296,7 +297,10 @@ header {
         .btn {
             display: flex;
             margin-top: 22px;
-            button {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 height: 48px;
                 padding: 0 41px;
                 border-radius: 10px;
@@ -320,7 +324,7 @@ header {
             h3, p {
                 color: #FFF;
             }
-            button {
+            a {
                 border: 1px solid #FFF;
                 color: #FFF;
             }
@@ -730,6 +734,78 @@ footer {
     }
 }
 
+.modalAccount_Background {
+    .modalAccount {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+        .cross_account {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .header {
+            text-align: center;
+            font-size: 3rem;
+        }
+        .account_name, .account_number, .account_email, .account_password, div {
+            font-size: 2rem;
+        }
+    }
+}
+
+.forStartups {
+    header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Give {
+        .container {
+            padding: 10% 10px 50px 10px;
+            display: flex;
+            align-items: center;
+        }
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h2 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 3rem;
+            }
+            ul {
+                margin-left: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                    font-size: 3rem;
+                    list-style: disc;
+                }
+            }
+        }
+        .right {
+            flex: 1;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media(max-width: 900px) {
     header {
         .navigation {
@@ -756,6 +832,15 @@ footer {
         }
         .rigth {
             display: none;
+        }
+    }
+
+    .forStartups {
+        .container {
+            flex-direction: column;
+            .right {
+                order: -1;
+            }
         }
     }
 }

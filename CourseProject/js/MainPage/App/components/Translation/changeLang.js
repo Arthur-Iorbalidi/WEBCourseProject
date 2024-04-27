@@ -1,4 +1,4 @@
-import { translate } from "../../../../assets/translate/translate.js";
+import { translate } from "../../../../../assets/translate/translate.js";
 
 class ChangeLang {
     init() {

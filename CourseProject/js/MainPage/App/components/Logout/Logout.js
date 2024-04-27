@@ -1,4 +1,8 @@
+import LocalStorageHandler from "../../../../services/LocalStorageHandler.js";
+
 class Logout {
+    localStorageHandler = new LocalStorageHandler();
+
     init() {
         document.querySelector('.logout').addEventListener('click', this.logout.bind(this));
 
@@ -7,6 +11,10 @@ class Logout {
 
     logout() {
         this.changePage();
+
+        const user = JSON.parse(this.localStorageHandler.get('user'));
+        user.isLogined = false;
+        this.localStorageHandler.set('user', JSON.stringify(user));
     }
 
     changePage() {

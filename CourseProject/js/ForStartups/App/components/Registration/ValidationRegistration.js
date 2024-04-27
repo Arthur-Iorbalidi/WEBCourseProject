@@ -1,4 +1,4 @@
-import LocalStorageHandler from "../../services/LocalStorageHandler.js";
+import LocalStorageHandler from "../../../../services/LocalStorageHandler.js";
 
 class ValidationRegistration {
     localStorageHandler = new LocalStorageHandler();
@@ -21,8 +21,6 @@ class ValidationRegistration {
         document.querySelector('.modalRegister_Background').addEventListener('click', this.back.bind(this));
 
         document.querySelector('.sighIn').addEventListener('click', this.open.bind(this));
-
-        document.querySelector('.sighIn_burger').addEventListener('click', this.open.bind(this));
 
         document.querySelector('.inputName').addEventListener('input', this.validationName.bind(this));
 
@@ -124,10 +122,15 @@ class ValidationRegistration {
     submit(event) {
         event.preventDefault();
 
-        this.localStorageHandler.set('Name', this.nameValue);
-        this.localStorageHandler.set('Number', this.numberValue);
-        this.localStorageHandler.set('Email', this.emailValue);
-        this.localStorageHandler.set('Password', this.passwordValue);
+        const user = {
+            name: this.nameValue,
+            number: this.numberValue,
+            email: this.emailValue,
+            password: this.passwordValue,
+            isLogined: true,
+        }
+
+        this.localStorageHandler.set('user', JSON.stringify(user));
 
         this.clearInputs();
         this.clear();

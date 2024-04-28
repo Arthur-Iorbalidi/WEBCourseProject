@@ -98,6 +98,7 @@ class Authorization {
         user.isLogined = true;
         this.localStorageHandler.set('user', JSON.stringify(user));
 
+        this.changeTheme(user.theme);
         this.changePage();
 
         document.querySelector('.submitAuthorization').disabled = true;
@@ -115,6 +116,15 @@ class Authorization {
         document.querySelectorAll('.open').forEach((elem) => {
             elem.classList.remove('hidden');
         });
+    }
+
+    changeTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.remove('darkTheme');
+        }
+        else {
+            document.body.classList.add('darkTheme');
+        }
     }
 }
 

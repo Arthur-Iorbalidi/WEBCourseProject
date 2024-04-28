@@ -6,7 +6,7 @@ import BurgerMenu from './components/MainPage/BurgerMenu.js';
 import Slider from './components/MainPage/Slider.js';
 import ChangeTheme from './components/MainPage/changeTheme.js';
 import ValidationRegistration from './components/Registration/ValidationRegistration.js';
-import ChangeLang from './components/Translation/changeLang.js';
+import ChangeLang, { changeLang } from './components/Translation/changeLang.js';
 
 class App {
     localStorageHandler = new LocalStorageHandler();
@@ -53,6 +53,18 @@ class App {
             document.querySelectorAll('.open').forEach((elem) => {
                 elem.classList.remove('hidden');
             });
+
+            this.changeTheme(user.theme);
+            changeLang(user.lang);
+        }
+    }
+
+    changeTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.remove('darkTheme');
+        }
+        else {
+            document.body.classList.add('darkTheme');
         }
     }
 }

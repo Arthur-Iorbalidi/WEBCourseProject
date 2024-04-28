@@ -130,6 +130,8 @@ class ValidationRegistration {
             email: this.emailValue,
             password: this.passwordValue,
             isLogined: true,
+            theme: 'light',
+            lang: 'en',
         }
 
         this.localStorageHandler.set('user', JSON.stringify(user));

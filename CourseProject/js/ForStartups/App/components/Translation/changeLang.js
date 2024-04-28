@@ -12,10 +12,12 @@ class ChangeLang {
         const user = JSON.parse(this.localStorageHandler.get('user'));
 
         if(document.querySelector('.changeLang').textContent === 'en') {
+            document.querySelector('.changeLang').textContent = 'ru';
             changeLang('ru');
             user.lang = 'ru';
         }
         else {
+            document.querySelector('.changeLang').textContent = 'en';
             changeLang('en');
             user.lang = 'en';
         }
@@ -26,8 +28,6 @@ class ChangeLang {
 
 export function changeLang(lang) {
     const translation = translate[lang];
-
-    document.querySelector('.changeLang').textContent = lang;
 
     const elements = document.querySelectorAll('[data-i18]');
 

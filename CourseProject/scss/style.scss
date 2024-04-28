@@ -757,7 +757,7 @@ footer {
             text-align: center;
             font-size: 3rem;
         }
-        .account_name, .account_number, .account_email, .account_password, div {
+        .account_name, .account_number, .account_email, .account_password, span {
             font-size: 2rem;
         }
     }
@@ -1011,10 +1011,8 @@ footer {
                 }
             }
         }
-        .logIn {
-            a {
-                color: #fff;
-            }
+        .logIn, .sighIn, .logout {
+            color: #fff;
         }
         .changeLang {
             color: #fff;

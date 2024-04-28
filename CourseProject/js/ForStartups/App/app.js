@@ -3,6 +3,7 @@ import Account from './components/Account/Account.js';
 import Authorization from './components/Authorization/Authorization.js';
 import Logout from './components/Logout/Logout.js';
 import ValidationRegistration from './components/Registration/ValidationRegistration.js';
+import { changeLang } from './components/Translation/changeLang.js';
 
 class App {
     localStorageHandler = new LocalStorageHandler();
@@ -34,6 +35,18 @@ class App {
             document.querySelectorAll('.open').forEach((elem) => {
                 elem.classList.remove('hidden');
             });
+
+            this.changeTheme(user.theme);
+            changeLang(user.lang);
+        }
+    }
+
+    changeTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.remove('darkTheme');
+        }
+        else {
+            document.body.classList.add('darkTheme');
         }
     }
 }

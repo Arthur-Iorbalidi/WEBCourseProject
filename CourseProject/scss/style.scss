@@ -769,38 +769,203 @@ footer {
         display: flex;
         justify-content: space-between;
     }
-    .Give {
+    .Cards {
         .container {
-            padding: 10% 10px 50px 10px;
+            padding: 30px 10px 50px 10px;
+        }
+        .Optimize {
             display: flex;
             align-items: center;
-        }
-        .left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            h2 {
-                font-size: 3rem;
+            gap: 100px;
+            padding: 3% 0;
+            .left {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
             }
-            p {
-                font-size: 3rem;
-            }
-            ul {
-                margin-left: 25px;
+            .right {
+                flex: 1;
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
-                li {
-                    font-size: 3rem;
-                    list-style: disc;
+                gap: 20px;
+                h2 {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 2.5rem;
+                }
+                ul {
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        font-size: 2rem;
+                        list-style: disc;
+                    }
                 }
             }
         }
-        .right {
-            flex: 1;
-            img {
-                width: 100%;
+        .Give {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding: 3% 0;
+            .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2 {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 2.5rem;
+                }
+                ul {
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        font-size: 2rem;
+                        list-style: disc;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.forEnterprise {
+    header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Automate {
+        .container {
+            padding: 70px 10px 50px 10px;
+        }
+        .header {
+            padding: 0 0 5% 0;
+            h1 {
+                font-size: 4rem;
+                text-align: center;
+            }
+            p {
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+        .Enable {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding: 5% 0;
+            .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2 {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 2.5rem;
+                }
+                ul {
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        font-size: 3rem;
+                        list-style: disc;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .Easily {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding: 5% 0;
+            .left {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            .right {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2 {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 2.5rem;
+                }
+                ul {
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        font-size: 3rem;
+                        list-style: disc;
+                    }
+                }
+            }
+        }
+        .Travel {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            padding: 5% 0;
+            .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2 {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 2.5rem;
+                }
+                ul {
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        font-size: 3rem;
+                        list-style: disc;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -837,9 +1002,16 @@ footer {
 
     .forStartups {
         .container {
-            flex-direction: column;
-            .right {
-                order: -1;
+            .Give {
+                flex-direction: column;
+                gap: 0;
+                .right {
+                    order: -1;
+                }
+            }
+            .Optimize {
+                flex-direction: column;
+                gap: 0;
             }
         }
     }
@@ -861,6 +1033,29 @@ footer {
         }
         .logo {
             grid-column: 1 / 3;
+        }
+    }
+
+    .forEnterprise {
+        .Automate {
+            .Enable {
+                flex-direction: column;
+                gap: 0;
+                .right {
+                    order: -1;
+                }
+            }
+            .Easily {
+                flex-direction: column;
+                gap: 0;
+            }
+            .Travel{
+                flex-direction: column;
+                gap: 0;
+                .right {
+                    order: -1;
+                }
+            }
         }
     }
 }

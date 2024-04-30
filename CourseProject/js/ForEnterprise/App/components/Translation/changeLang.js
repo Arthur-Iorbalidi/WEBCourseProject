@@ -29,6 +29,8 @@ class ChangeLang {
 export function changeLang(lang) {
     const translation = translate[lang];
 
+    document.querySelector('.changeLang').textContent = lang;
+
     const elements = document.querySelectorAll('[data-i18]');
 
     elements.forEach((element) => {
@@ -36,6 +38,15 @@ export function changeLang(lang) {
         const translatedText = translation[key];
 
         element.textContent = translatedText;
+    });
+
+    const inputs = document.querySelectorAll('[data-i18-placeholder]');
+
+    inputs.forEach((element) => {
+        const key = element.getAttribute('data-i18-placeholder');
+        const translatedText = translation[key];
+
+        element.placeholder = translatedText;
     });
 }
 

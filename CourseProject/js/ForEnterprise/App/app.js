@@ -3,7 +3,8 @@ import Account from './components/Account/Account.js';
 import Authorization from './components/Authorization/Authorization.js';
 import Logout from './components/Logout/Logout.js';
 import ValidationRegistration from './components/Registration/ValidationRegistration.js';
-import { changeLang } from './components/Translation/changeLang.js';
+import ChangeLang, { changeLang } from './components/Translation/changeLang.js';
+import ChangeTheme from './components/changeTheme/changeTheme.js';
 
 class App {
     localStorageHandler = new LocalStorageHandler();
@@ -20,6 +21,12 @@ class App {
 
         const account = new Account();
         account.init();
+
+        const changeLang = new ChangeLang();
+        changeLang.init();
+
+        const changeTheme = new ChangeTheme();
+        changeTheme.init();
 
         this.isLogined();
     }

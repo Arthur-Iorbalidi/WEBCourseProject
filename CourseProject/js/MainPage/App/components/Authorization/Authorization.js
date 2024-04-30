@@ -14,26 +14,26 @@ class Authorization {
 
         document.querySelector('.logIn_burger').addEventListener('click', this.open.bind(this));
 
-        document.querySelector('.inputNameAuthorization').addEventListener('input', this.validationName.bind(this));
+        document.querySelector('.inputEmailAuthorization').addEventListener('input', this.validationEmail.bind(this));
 
         document.querySelector('.inputPasswordAuthorization').addEventListener('input', this.validationPassword.bind(this));
 
         document.querySelector('.form_Authorization').addEventListener('submit', this.submit.bind(this));
     }
 
-    validationName(event) {
+    validationEmail(event) {
         const user = JSON.parse(this.localStorageHandler.get('user'));
         if(!user) {
-            document.querySelector('.mistakeMessageNameAuthorization').textContent = 'There isn\'t such user';
+            document.querySelector('.mistakeMessageEmailAuthorization').textContent = 'There isn\'t such user';
             this.isNameValid = false;
             return;
         }
-        if(user.name !== event.target.value) {
-            document.querySelector('.mistakeMessageNameAuthorization').textContent = 'There isn\'t such user';
+        if(user.email !== event.target.value) {
+            document.querySelector('.mistakeMessageEmailAuthorization').textContent = 'There isn\'t such user';
             this.isNameValid = false;
         }
         else {
-            document.querySelector('.mistakeMessageNameAuthorization').textContent = '';
+            document.querySelector('.mistakeMessageEmailAuthorization').textContent = '';
             this.isNameValid = true;
         }
 
@@ -43,7 +43,7 @@ class Authorization {
     validationPassword(event) {
         const user = JSON.parse(this.localStorageHandler.get('user'));
         if (!this.isNameValid) {
-            document.querySelector('.mistakeMessagePasswordAuthorization').textContent = 'Enter your name';
+            document.querySelector('.mistakeMessagePasswordAuthorization').textContent = 'Enter your email';
             this.isPasswordValid = false;
             return;
         }
@@ -71,10 +71,12 @@ class Authorization {
 
     open() {
         document.querySelector('.modalAuthorization_Background').classList.add('active');
+        document.body.classList.add('noscroll');
     }
 
     clear() {
         document.querySelector('.modalAuthorization_Background').classList.remove('active');
+        document.body.classList.remove('noscroll');
     }
 
     back(event) {
@@ -84,7 +86,7 @@ class Authorization {
     }
 
     clearInputs() {
-        document.querySelector('.inputNameAuthorization').value = '';
+        document.querySelector('.inputEmailAuthorization').value = '';
         document.querySelector('.inputPasswordAuthorization').value = '';
     }
 

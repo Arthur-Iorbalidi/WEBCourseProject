@@ -37,6 +37,15 @@ export function changeLang(lang) {
 
         element.textContent = translatedText;
     });
+
+    const inputs = document.querySelectorAll('[data-i18-placeholder]');
+
+    inputs.forEach((element) => {
+        const key = element.getAttribute('data-i18-placeholder');
+        const translatedText = translation[key];
+
+        element.placeholder = translatedText;
+    });
 }
 
 export default ChangeLang;

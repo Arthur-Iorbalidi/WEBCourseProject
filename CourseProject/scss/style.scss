@@ -641,11 +641,20 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        .content {
+            max-height: 90%;
+            width: 100%;
+            overflow: auto;
+            form {
+                margin: 0 auto;
+            }
+        }
     }
 }
 
 .modalRegister_Background {
     .modalRegister {
+        overflow: auto;
         .form_Register {
             width: 100%;
             max-width: 350px;
@@ -665,6 +674,22 @@ footer {
             padding: 5px;
             border: 1px solid #000;
             font-size: 2.5rem;
+            border-bottom: 1px solid red;
+            &.correct {
+                border-bottom: 1px solid #000;
+            }
+        }
+        .inputPatronymic {
+            border-bottom: 1px solid #000;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .generatePassword {
+                height: 100%;
+                cursor: pointer;
+            }
         }
         .mistakeMessage {
             width: 100%;
@@ -768,6 +793,11 @@ footer {
         padding: 20px;
         display: flex;
         justify-content: space-between;
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
     }
     .Cards {
         .container {
@@ -849,6 +879,11 @@ footer {
         padding: 20px;
         display: flex;
         justify-content: space-between;
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
     }
     .Automate {
         .container {
@@ -1193,6 +1228,11 @@ footer {
 .darkTheme {
     background-color: #000;
     header {
+        .authorization {
+            span {
+                color: #fff;
+            }
+        }
         .brex {
             img {
                 background-color: #fff;
@@ -1213,6 +1253,13 @@ footer {
             color: #fff;
         }
         .right {
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+        .controls {
             svg {
                 path {
                     fill: #fff;
@@ -1275,6 +1322,39 @@ footer {
                     background: #fff;
                 }
             }
+        }
+    }
+
+    .Cards {
+        .Optimize {
+            .right {
+                h2, p {
+                    color: #fff
+                }
+                ul {
+                    li {
+                        color: #fff
+                    }
+                }
+            }
+        }
+        .Give {
+            .left {
+                h2, p {
+                    color: #fff
+                }
+                ul {
+                    li {
+                        color: #fff
+                    }
+                }
+            }
+        }
+    }
+
+    .Automate {
+        h1, h2, p {
+            color: #fff;
         }
     }
 }

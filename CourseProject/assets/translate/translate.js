@@ -58,7 +58,17 @@ export const translate = {
         56: 'Регистрация',
         57: 'Регистрация',
         58: 'Авторизация',
-        59: 'Ввод'
+        59: 'Ввод',
+        60: 'Отчество: ',
+        61: 'Фамилия: ',
+        62: 'День рождения',
+        63: 'Имя',
+        64: 'Фамилия',
+        65: 'Отчество',
+        66: 'День рождения',
+        67: 'Номер телефона',
+        68: 'Пароль',
+        69: 'Повторите пароль'
     },
     en: {
         1: 'Solutions',
@@ -119,6 +129,16 @@ export const translate = {
         56: 'Sign in',
         57: 'Registration',
         58: 'Authorization',
-        59: 'Submit'
+        59: 'Submit',
+        60: 'Patronymic: ',
+        61: 'Surname: ',
+        62: 'Birthday: ',
+        63: 'Name',
+        64: 'Surname',
+        65: 'Patronymic',
+        66: 'Birthday',
+        67: 'Number',
+        68: 'Password',
+        69: 'Repeat password'
     }
 }

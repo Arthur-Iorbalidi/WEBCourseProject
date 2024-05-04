@@ -27,6 +27,8 @@ class ValidationRegistration {
     init() {
         document.querySelector('.modalRegister_Background').addEventListener('click', this.back.bind(this));
 
+        document.querySelector('.cross_register').addEventListener('click', this.clear.bind(this));
+
         document.querySelector('.sighIn').addEventListener('click', this.open.bind(this));
 
         document.querySelector('.inputName').addEventListener('input', this.validationName.bind(this));
@@ -265,6 +267,7 @@ class ValidationRegistration {
     clear() {
         document.querySelector('.modalRegister_Background').classList.remove('active');
         document.body.classList.remove('noscroll');
+        this.clearInputs();
     }
 
     back(event) {

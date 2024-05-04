@@ -641,6 +641,12 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        .cross {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
         .content {
             max-height: 90%;
             width: 100%;

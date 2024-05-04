@@ -10,6 +10,8 @@ class Authorization {
     init() {
         document.querySelector('.modalAuthorization_Background').addEventListener('click', this.back.bind(this));
 
+        document.querySelector('.cross_authorization').addEventListener('click', this.clear.bind(this));
+
         document.querySelector('.logIn').addEventListener('click', this.open.bind(this));
 
         document.querySelector('.logIn_burger').addEventListener('click', this.open.bind(this));
@@ -77,6 +79,7 @@ class Authorization {
     clear() {
         document.querySelector('.modalAuthorization_Background').classList.remove('active');
         document.body.classList.remove('noscroll');
+        this.clearInputs();
     }
 
     back(event) {

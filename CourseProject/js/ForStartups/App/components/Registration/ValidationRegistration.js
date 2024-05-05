@@ -198,10 +198,10 @@ class ValidationRegistration {
         var formattedDate = inputDate.replace(/\D/g, "");
         formattedDate = formattedDate.slice(0, 8);
     
-        if (formattedDate.length >= 2) {
+        if (formattedDate.length > 2) {
             formattedDate = formattedDate.slice(0, 2) + "-" + formattedDate.slice(2);
         }
-        if (formattedDate.length > 4) {
+        if (formattedDate.length > 5) {
             formattedDate = formattedDate.slice(0, 5) + "-" + formattedDate.slice(5);
         }
     

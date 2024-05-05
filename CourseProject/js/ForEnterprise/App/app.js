@@ -33,6 +33,9 @@ class App {
 
     isLogined() {
         const user = JSON.parse(this.localStorageHandler.get('user'));
+        if(!user) {
+            return;
+        }
         if(user.isLogined) {
             document.querySelector('.logIn').classList.add('hidden');
             document.querySelector('.sighIn').classList.add('hidden');

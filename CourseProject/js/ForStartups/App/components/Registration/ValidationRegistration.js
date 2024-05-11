@@ -14,6 +14,7 @@ class ValidationRegistration {
     isEmailValid = false;
     isPasswordValid = false;
     isRepeatPasswordValid = false;
+    terms = false;
 
     nameValue = null;
     surnameValue = null;
@@ -47,6 +48,8 @@ class ValidationRegistration {
         document.querySelector('.generatePassword').addEventListener('click', this.generatePassword.bind(this));
 
         document.querySelector('.inputRepeatPassword').addEventListener('input', this.validationRepeatPassword.bind(this));
+
+        document.querySelector('.conditions').addEventListener('change', this.checkTerms.bind(this));
 
         document.querySelector('.form_Register').addEventListener('submit', this.submit.bind(this));
     }
@@ -198,10 +201,10 @@ class ValidationRegistration {
         var formattedDate = inputDate.replace(/\D/g, "");
         formattedDate = formattedDate.slice(0, 8);
     
-        if (formattedDate.length >= 2) {
+        if (formattedDate.length > 2) {
             formattedDate = formattedDate.slice(0, 2) + "-" + formattedDate.slice(2);
         }
-        if (formattedDate.length > 4) {
+        if (formattedDate.length > 5) {
             formattedDate = formattedDate.slice(0, 5) + "-" + formattedDate.slice(5);
         }
     
@@ -250,8 +253,18 @@ class ValidationRegistration {
         document.querySelector('.inputPassword').dispatchEvent(new Event("input"));
     }
 
+    checkTerms(event) {
+        if(event.target.checked) {
+            this.terms = true;
+        }
+        else {
+            this.terms = false;
+        }
+        this.checkValidation();
+    }
+
     checkValidation() {
-        if(this.isNameValid && this.isSurnameValid && this.isPatronymicValid && this.isBirthdayValid && this.isNumberValid && this.isEmailValid && this.isPasswordValid) {
+        if(this.isNameValid && this.isSurnameValid && this.isPatronymicValid && this.isBirthdayValid && this.isNumberValid && this.isEmailValid && this.isPasswordValid && this.isRepeatPasswordValid && this.terms) {
             document.querySelector('.submitRegistration').disabled = false;
         }
         else {
@@ -285,6 +298,7 @@ class ValidationRegistration {
         document.querySelector('.inputEmail').value = '';
         document.querySelector('.inputPassword').value = '';
         document.querySelector('.inputRepeatPassword').value = '';
+        document.querySelector('.conditions').checked = false;
     }
 
     submit(event) {

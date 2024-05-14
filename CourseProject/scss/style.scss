@@ -789,6 +789,7 @@ footer {
     .modalAccount {
         .wrapper {
             display: flex;
+            align-items: center;
             flex-direction: column;
             gap: 40px;
         }
@@ -810,6 +811,13 @@ footer {
         }
         .account_name, .account_number, .account_email, .account_password, span {
             font-size: 2rem;
+        }
+        .reset {
+            padding: 10px 40px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            background-color: #ffaaaa;
+            max-width: fit-content;
         }
     }
 }

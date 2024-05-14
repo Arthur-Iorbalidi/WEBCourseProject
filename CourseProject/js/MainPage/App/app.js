@@ -6,6 +6,7 @@ import BurgerMenu from './components/MainPage/BurgerMenu.js';
 import Slider from './components/MainPage/Slider.js';
 import ChangeTheme from './components/MainPage/changeTheme.js';
 import ValidationRegistration from './components/Registration/ValidationRegistration.js';
+import Reset from './components/Reset/reset.js';
 import ChangeLang, { changeLang } from './components/Translation/changeLang.js';
 
 class App {
@@ -35,6 +36,9 @@ class App {
 
         const account = new Account();
         account.init();
+
+        const reset = new Reset();
+        reset.init();
 
         this.isLogined();
     }

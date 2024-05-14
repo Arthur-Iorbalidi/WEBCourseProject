@@ -312,19 +312,49 @@ class ValidationRegistration {
             number: this.numberValue,
             email: this.emailValue,
             password: this.passwordValue,
-            isLogined: true,
             theme: 'light',
             lang: 'en',
         }
 
-        this.localStorageHandler.set('user', JSON.stringify(user));
+        const users = JSON.parse(this.localStorageHandler.get('users'));
 
-        this.clearInputs();
-        this.clear();
+        if(!users) {
+            this.localStorageHandler.set('users', JSON.stringify([user]));
 
-        this.changePage();
+            this.localStorageHandler.set('user', JSON.stringify(user));
 
-        document.querySelector('.submitRegistration').disabled = true;
+            this.clearInputs();
+            this.clear();
+
+            this.changePage();
+
+            document.querySelector('.submitRegistration').disabled = true;
+        }
+        else {
+            let isEmailAvailable = true;
+            users.forEach((user) => {
+                if(user.email === this.emailValue) {
+                    isEmailAvailable = false;
+                }
+            });
+
+            if(!isEmailAvailable) {
+                document.querySelector('.mistakeMessageEmail').textContent = 'This email is already taken';
+                return;
+            }
+            else {
+                this.localStorageHandler.set('users', JSON.stringify([...users, user]));
+
+                this.localStorageHandler.set('user', JSON.stringify(user));
+
+                this.clearInputs();
+                this.clear();
+
+                this.changePage();
+
+                document.querySelector('.submitRegistration').disabled = true;
+            }
+        }
     }
 
     changePage() {

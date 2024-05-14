@@ -44,7 +44,7 @@ class App {
         if(!user) {
             return;
         }
-        if(user.isLogined) {
+        else {
             document.querySelector('.logIn').classList.add('hidden');
             document.querySelector('.logIn_burger').classList.add('hidden');
             document.querySelector('.sighIn').classList.add('hidden');

@@ -300,7 +300,16 @@ class ValidationRegistration {
         document.querySelector('.inputEmail').value = '';
         document.querySelector('.inputPassword').value = '';
         document.querySelector('.inputRepeatPassword').value = '';
+        document.querySelector('.mistakeMessageName').textContent = '';
+        document.querySelector('.mistakeMessageSurname').textContent = '';
+        document.querySelector('.mistakeMessagePatronymic').textContent = '';
+        document.querySelector('.mistakeMessageBirthday').textContent = '';
+        document.querySelector('.mistakeMessageNumber').textContent = '';
+        document.querySelector('.mistakeMessageEmail').textContent = '';
+        document.querySelector('.mistakeMessagePassword').textContent = '';
+        document.querySelector('.mistakeMessageRepeatPassword').textContent = '';
         document.querySelector('.conditions').checked = false;
+        document.querySelector('.submitRegistration').disabled = true;
     }
 
     submit(event) {

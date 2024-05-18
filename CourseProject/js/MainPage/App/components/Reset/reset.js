@@ -11,6 +11,7 @@ class Reset {
 
     reset() {
         this.localStorageHandler.clear();
+        location.reload();
     }
 }
 

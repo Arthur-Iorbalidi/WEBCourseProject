@@ -90,6 +90,9 @@ class Authorization {
     clearInputs() {
         document.querySelector('.inputEmailAuthorization').value = '';
         document.querySelector('.inputPasswordAuthorization').value = '';
+        document.querySelector('.mistakeMessageEmailAuthorization').textContent = '';
+        document.querySelector('.mistakeMessagePasswordAuthorization').textContent = '';
+        document.querySelector('.submitAuthorization').disabled = true;
     }
 
     submit(event) {
@@ -126,6 +129,9 @@ class Authorization {
                 else {
                     document.querySelector('.mistakeMessagePasswordAuthorization').textContent = 'Incorrect password';
                 }
+            }
+            else {
+                document.querySelector('.mistakeMessageEmailAuthorization').textContent = 'There isn\'t such user';
             }
         }
     }

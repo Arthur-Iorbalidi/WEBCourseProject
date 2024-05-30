@@ -365,8 +365,18 @@ class ValidationRegistration {
                 this.changePage();
 
                 document.querySelector('.submitRegistration').disabled = true;
+
+                this.popUp();
             }
         }
+    }
+    
+    popUp() {
+        const popUp = document.createElement('div');
+        popUp.textContent = 'Registration completed successfully';
+        popUp.classList.add('popUp');
+        document.body.append(popUp);
+        setTimeout(() => popUp.remove(), 3000);
     }
 
     changePage() {
